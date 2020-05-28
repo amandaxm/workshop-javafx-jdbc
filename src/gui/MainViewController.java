@@ -41,7 +41,7 @@ public class MainViewController implements Initializable {
 		loadView("/gui/DepartmentList.fxml", (DepartmentListController controller)->{
 			
 			controller.setDepartmentService(new DepartmentService());
-			controller.UpdateTableView();	
+			controller.updateTableView();	
 		
 			
 			

@@ -71,7 +71,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 		tableViewDepartment.prefHeightProperty().bind(stage.heightProperty());
 	}
 
-	public void UpdateTableView() {
+	public void updateTableView() {
 		if (service == null) {
 			throw new IllegalStateException("Serviço esta null");
 		}
@@ -93,7 +93,6 @@ public class DepartmentListController implements Initializable, DataChangeListen
 			controller.setDepartmentService(new DepartmentService());
 			controller.UpdateFormData();
 			controller.subscribeDataChangeListener(this);
-
 			Stage dialogStage = new Stage();
 			dialogStage.setTitle("Entre com o departamento");
 			dialogStage.setScene(new Scene(pane));
@@ -109,11 +108,10 @@ public class DepartmentListController implements Initializable, DataChangeListen
 	}
 
 	@Override
+
 	public void onDataChanged() {
-		// o que fazer quando dados foram alterados
-		// atualizaar dados da tabela
-		UpdateTableView();
+
+		updateTableView();
 
 	}
-
 }

@@ -110,7 +110,7 @@ public class DepartmentFormController implements Initializable {
 		obj.setId(Utils.tryParseToInt(txtId.getText()));
 		if (txtName.getText() == null || txtName.getText().trim().equals("")) {
 
-			exception.addError("name", "Nome nao pode ser vazio");
+			exception.addError("name", "Nome nulo invalido");
 
 		}
 		obj.setName(txtName.getText());
